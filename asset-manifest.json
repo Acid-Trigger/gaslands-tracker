@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gaslands-tracker/static/css/main.d4d514d0.css",
-    "main.js": "/gaslands-tracker/static/js/main.03fc19cc.js",
+    "main.js": "/gaslands-tracker/static/js/main.be40f941.js",
     "index.html": "/gaslands-tracker/index.html",
     "main.d4d514d0.css.map": "/gaslands-tracker/static/css/main.d4d514d0.css.map",
-    "main.03fc19cc.js.map": "/gaslands-tracker/static/js/main.03fc19cc.js.map"
+    "main.be40f941.js.map": "/gaslands-tracker/static/js/main.be40f941.js.map"
   },
   "entrypoints": [
     "static/css/main.d4d514d0.css",
-    "static/js/main.03fc19cc.js"
+    "static/js/main.be40f941.js"
   ]
 }
