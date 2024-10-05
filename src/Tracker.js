@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Tracker() {
+function Tracker({ autoShiftHazard }) {
   const [gear, setGear] = useState(1);
   const [hazards, setHazards] = useState(0);
   const [hull, setHull] = useState(10);
@@ -10,8 +10,19 @@ function Tracker() {
   const [crew, setCrew] = useState(0);
   const [cans, setCans] = useState(0);
 
-  const increaseGear = () => setGear(gear + 1);
-  const decreaseGear = () => setGear(gear > 1 ? gear - 1 : 1);
+  const increaseGear = () => {
+    setGear(gear + 1);
+    if (autoShiftHazard) {
+      setHazards(hazards + 1);
+    }
+  };
+
+  const decreaseGear = () => {
+    setGear(gear > 1 ? gear - 1 : 1);
+    if (autoShiftHazard) {
+      setHazards(hazards + 1);
+    }
+  };
 
   const addHazard = () => setHazards(hazards + 1);
   const removeHazard = () => setHazards(hazards > 0 ? hazards - 1 : 0);
