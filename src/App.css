@@ -61,6 +61,7 @@
   align-items: center;
   margin-bottom: 20px;
   color: #d3d3d3; /* Light gray text for readability */
+  width: 100%; /* Ensure sections take full width */
 }
 
 button {
@@ -83,12 +84,13 @@ button:hover {
 input[type="text"] {
   margin: 5px 0;
   padding: 5px;
-  width: 95%;
+  width: calc(50% - 10px); /* Half the previous width */
   font-size: 14px;
   background-color: #3e3e3e; /* Dark input background */
   color: #ffcc00; /* Bright text color */
   border: 2px solid #ffcc00; /* Bright border */
   border-radius: 5px;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 input[type="text"]::placeholder {
@@ -119,4 +121,64 @@ input[type="text"]::placeholder {
 .remove-tracker-button:hover {
   background-color: #ffcc00;
   color: #2e2e2e;
+}
+
+.build-slots-header,
+.perks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align title and buttons */
+  width: 100%; /* Full width for alignment */
+  padding: 0 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.build-slots-header h2,
+.perks-header h2 {
+  margin-right: 10px;
+}
+
+.build-slots-header button,
+.perks-header button {
+  margin-left: 5px;
+}
+
+.header-with-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align title and buttons to the start */
+  width: 100%; /* Full width for alignment */
+  padding: 0 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.header-with-buttons h2 {
+  margin-right: 10px;
+}
+
+.header-with-buttons button {
+  margin-left: 5px;
+}
+
+.build-slot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ammo-controls {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Add space between input and ammo controls */
+}
+
+.ammo-controls span {
+  margin-right: 10px;
+  font-weight: bold; /* Make the text bolder */
+}
+
+.ammo-controls button {
+  margin-left: 5px;
 }
